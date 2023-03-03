@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Starving Artists script [FREE]", "Synapse")
+local Window = Library.CreateLib("Starving Artists script [OG]", "Synapse")
 local Tab = Window:NewTab("Generate") 
 local Section = Tab:NewSection("Generate")
 Section:NewTextBox("image link", "", function(txt)
@@ -98,7 +98,4 @@ end)
 local Section = Tab:NewSection("LocalPlayer")
 Section:NewSlider("Walk speed", "SliderInfo", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-Section:NewSlider("Jump Power", "SliderInfo", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = w
 end)
