@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Starving Artists script [FREE]", "Synapse")
-local Tab = Window:NewTab("Generate")
+local Tab = Window:NewTab("Generate") 
 local Section = Tab:NewSection("Generate")
 Section:NewTextBox("image link", "", function(txt)
 	local image = (txt) -- image you want to import
