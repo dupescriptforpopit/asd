@@ -1,9 +1,19 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Starving Artists script [OG]", "Synapse")
-local Tab = Window:NewTab("Generate") 
-local Section = Tab:NewSection("Generate")
-Section:NewTextBox("image link", "", function(txt)
-	local image = (txt) -- image you want to import
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Pixel Artists {Vip version}", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+    Name = "Main",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+local Section = Tab:AddSection({
+    Name = "Main"
+})
+Tab:AddTextbox({
+    Name = "Image link",
+    Default = "",
+    TextDisappear = true,
+    Callback = function(Value)
+        local image = (Value)
 local resolutionX = 32 -- usually it's 32 but it might change depending on the frame?
 local resolutionY = 32 -- usually it's 32 but it might change depending on the frame?
 
@@ -94,8 +104,5 @@ function import(url)
 end
 
 import(image)
-end)
-local Section = Tab:NewSection("LocalPlayer")
-Section:NewSlider("Walk speed", "SliderInfo", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
+    end   
+})
