@@ -207,6 +207,15 @@ end
 import(image)
     end   
 })
+local Section = Tab:AddSection({
+	Name = "Instant arts"
+})
+Tab:AddButton({
+	Name = "Giga chad",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/haahytispoop/gigas/main/README.md"))()
+  	end    
+})
 local Tab = Window:MakeTab({
 	Name = "Arts",
 	Icon = "rbxassetid://4483345998",
